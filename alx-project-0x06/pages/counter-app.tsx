@@ -1,6 +1,7 @@
 import { useAppSelector, useAppDispatch, increment, decrement } from "@/store/store"; // Updated imports
 import { RootState } from "@/store/store"; // Ensure RootState is imported if not already via useAppSelector
-", "
+
+
 const CounterApp: React.FC = () => {
 
   // const count = useAppSelector((state: RootState) => state.counter.value) // Use useAppSelector
