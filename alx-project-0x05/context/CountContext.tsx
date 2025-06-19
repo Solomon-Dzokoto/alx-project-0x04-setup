@@ -1,9 +1,12 @@
 import { createContext, useContext,  useState, ReactNode } from "react"
 
 interface CountContextProps {
+    increment: () => void
+   decrement: () => void;
   count: number
   increment: () => void
   decrement: () => void
+
 }
 
 export const CountContext = createContext<CountContextProps | undefined>(undefined)
