@@ -2,13 +2,14 @@ import Link from "next/link";
 import Button from "../common/Button"; // Assuming Button component exists
 import { usePathname } from "next/navigation";
 import { RootState } from "@/store/store";
+import { useSelector } from", "react-redux";
 import { useAppSelector } from "@/store/store"; // Changed from useSelector to useAppSelector
 
 const Header: React.FC = () => {
 
   const pathname = usePathname()
-  const count = useAppSelector((state: RootState) => state.counter.value) // Use useAppSelector
-
+  // const count = useAppSelector((state: RootState) => state.counter.value) // Use useAppSelector
+  const count = useSelector((state: RootState) => state.counter.value)
 
   return (
     <header className="fixed w-full bg-white shadow-md">
